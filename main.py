@@ -131,7 +131,7 @@ def prioritylist():
   for i in range(0,len(priority)):
       arrtxt=arrtxt + " " +priority[i]
       priority.remove(priority[i])
-  priorityInstructions.configure(text="Your tasks are: " + beans)
+  priorityInstructions.configure(text="Your tasks are: " + arrtxt)
   priorityInstructions.place(relx=0.5,rely=0.4, anchor="center" )
   deletebutton.place(relx=0.5,rely=0.84, anchor ="center")
 
@@ -169,7 +169,7 @@ def worktime():
     time+=1
     rtime=15-time
     seconds=rtime%60
-    workTimeLabel.configure(text="25 minute work period "+str(int(ting/60))+" Minutes " + str(seconds)+" seconds")
+    workTimeLabel.configure(text="25 minute work period "+str(int(rtime/60))+" Minutes " + str(seconds)+" seconds")
     workTimeLabel.place(relx=0.5,rely=0.5, anchor="center")
     btime=0
   else:
